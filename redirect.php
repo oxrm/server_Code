@@ -27,17 +27,17 @@ if ((!$username) || (!$password))
     $invalid_text = "Invalid_Data";
 	echo json_encode($invalid_text);
 	exit;
-	exit;
+	
 }
 
 //require the config file
 require ("config.php");
 
-
+//Define user table name
 $table_name ="user";
 
 //build and issue the query
-$sql ="SELECT * FROM $table_name WHERE userID= '$username' AND Password = '$password'";
+$sql ="SELECT * FROM $table_name WHERE userID = '$username' AND Password = '$password'";
 $result = @mysql_query($sql,$bd) or die(mysql_error());
 
 //get the number of rows in the result set
@@ -64,6 +64,8 @@ if ($num != 0)
 	$_SESSION['LoginID']        = $sql -> LoginID;
 
 	}
+	
+$log_login = "1" ;
 echo json_encode($_SESSION);
 
 //log logins if turned on
@@ -84,5 +86,3 @@ echo json_encode($_SESSION);
 }
 
 ?>
-
-<head><title>Redirect</title></head>
