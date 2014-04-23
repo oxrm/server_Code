@@ -46,6 +46,10 @@ $num = mysql_num_rows($result);
 //set session variables if there is a match
 if ($num != 0) 
 {
+//require the workout file
+require ("workoutData.php");
+require ("TrainerData.php");
+
 	while ($sql = mysql_fetch_object($result)) 
 	{
  	
@@ -64,7 +68,7 @@ if ($num != 0)
 	$_SESSION['LoginID']        = $sql -> LoginID;
 
 	}
-	
+
 $log_login = "1" ;
 echo json_encode($_SESSION);
 

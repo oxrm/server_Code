@@ -65,7 +65,7 @@ else{
 $sql = "INSERT INTO $table_name VALUES('$Balance', '$userID', '$DOB', '$Height', '$Weight','$Password', '$EmailAddress', '$Name', '$Address', '$CCNum', '$Type', '$transID', '$LoginID' )";
 $result = @mysql_query($sql,$bd) or die(mysql_error());
 
-$user_added = "User_added";
+$user_added = "User_Added";
 echo json_encode($user_added);
 exit;
 }
