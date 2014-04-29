@@ -1,4 +1,13 @@
 <?php
+//CSC505- Advance Software Engineer 
+//Prof Joan Peckham
+//Class Project : FH-Mobile App For Android
+//Team Members: 
+//Prepared by
+//Omar Rivera
+//Andrew Poirier
+//Daven Amin
+//Rick Rejeleene
 
 //Define user table name
 $table_name_4 ="workout_db";

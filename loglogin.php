@@ -1,5 +1,15 @@
 <?php
 
+//CSC505- Advance Software Engineer 
+//Prof Joan Peckham
+//Class Project : FH-Mobile App For Android
+//Team Members: 
+//Prepared by
+//Omar Rivera
+//Andrew Poirier
+//Daven Amin
+//Rick Rejeleene
+
 //open the file
 $file = fopen("logs/log.html",  "a");
 
@@ -7,7 +17,7 @@ $file = fopen("logs/log.html",  "a");
 $adr = $_SERVER['REMOTE_ADDR'];
 
 //require config.php file
-require('config.php');
+require('connectToDatabase.php');
 
 //set the date and time
 $time=gmdate("d M Y H:i", time() + $zone);
